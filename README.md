@@ -11,3 +11,9 @@ These write-ups are shared for **educational purposes** only. They are intended 
 
 I do not support cheating or flag harvesting.  
 If you choose to copy answers or flags without working through the challenges yourself, you are only cheating yourself out of the learning experience. The real value of these labs lies in understanding the process, not the final answer.
+
+## Availability
+
+All write-ups found in this repository are also published on my personal website, where they may be presented in a more blog-style or narrative format. Feel free to check it out
+[HERE](https://jernejpetek.github.io/MyCyberLog/)
+
