@@ -7,9 +7,6 @@ What sets _Silver Platter_ apart is its resistance to common attacks, including 
 This write-up walks through the attack path step by step, explaining the reasoning behind each action and highlighting key lessons learned along the way.
 ___
 
-```
-10.80.174.146
-```
 ## Initial Enumeration
 
 The first step was a full TCP port scan using **Nmap** to identify exposed services and establish the attack surface of the target.
