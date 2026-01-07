@@ -1,4 +1,4 @@
-**Introduction**
+## **Introduction**
 
 This write-up covers my solution to the _Silver Platter_ challenge on TryHackMe, a room designed to test practical hacking skills against a deliberately hardened web server. The goal is to enumerate the target, bypass defensive measures, and capture the hidden flags using a thoughtful and methodical approach.
 
