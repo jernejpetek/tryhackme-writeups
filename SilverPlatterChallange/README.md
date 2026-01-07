@@ -200,13 +200,13 @@ Login=SilverAdmin&DomainId=0
 
 With the request prepared according to the vulnerability documentation, the next step was to test whether the authentication bypass would succeed.
 ___
-If you need guidance on how to intercept, modify and send the modified request, I have prepared a [[Silver Platter proxy guide]] on how I did it for this challange. Feel free to check it out.
+If you need guidance on how to intercept, modify and send the modified request, I have prepared a [silverpeas proxy guide](silverpeas-proxy.md) on how I did it for this challange. Feel free to check it out.
 ___
 ## Post-Authentication Access and Further Vulnerability
 
 After sending the modified login request, authentication was successful and access to the **Silverpeas main interface** was obtained. Upon entry, it became apparent that the entire application interface was displayed in **French**, making manual navigation more difficult.
 
-![[MainFrame.png]]
+![mainframe](images/MainFrame.png)
 While reviewing the application, I recalled another vulnerability encountered during earlier research into Silverpeas authentication issues. Specifically, **CVE-2023-47323**, a **broken access control** vulnerability that allows an authenticated user to view arbitrary messages by manipulating the message ID parameter in the URL.
 
 Full details of this vulnerability are documented here:  
@@ -224,7 +224,7 @@ ___
 
 After identifying the vulnerable message endpoint, multiple message IDs were tested by incrementing the `ID` parameter, starting from `1`. This process eventually led to **message ID 6**, which exposed valid user credentials.
 
-![[Creds.png]]
+![credentials](images/Creds.png)
 
 The disclosed credentials were:
 - **Username:** `tim`
@@ -243,7 +243,7 @@ ssh tim@10.80.174.146
 ```
 
 When prompted, the recovered password was entered and accepted successfully.  
-![[ssh.png]]
+![ssh](images/ssh.png)
 
 This confirmed valid SSH access as the user **tim**, providing an interactive shell on the target system and allowing further exploration of the server.
 ___
