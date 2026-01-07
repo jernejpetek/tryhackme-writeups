@@ -169,7 +169,7 @@ This immediately revealed a **login page:**
 http://10.80.174.146:8080/silverpeas/defaultLogin.jsp
 ```
 
-![[silverpeas.png]]
+![silverpeas](images/silverpeas.png)
 uncovering an application that had not been identified through automated scanning and providing a clear authentication entry point.
 ___
 While reviewing the Silverpeas login page, I noticed a **copyright year of 2022** displayed at the bottom of the page. This suggested that the application might be running an older version of Silverpeas.
