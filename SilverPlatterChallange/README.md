@@ -17,12 +17,6 @@ nmap -sV -sC 10.80.174.146
 
 Result:
 ```bash
-Starting Nmap 7.80 ( https://nmap.org ) at 2026-01-07 08:37 GMT
-mass_dns: warning: Unable to open /etc/resolv.conf. Try using --system-dns or specify valid servers with --dns-servers
-mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
-Nmap scan report for 10.80.174.146
-Host is up (0.00015s latency).
-Not shown: 997 closed ports
 PORT     STATE SERVICE    VERSION
 22/tcp   open  ssh        OpenSSH 8.9p1 Ubuntu 3ubuntu0.4 (Ubuntu Linux; protocol 2.0)
 80/tcp   open  http       nginx 1.18.0 (Ubuntu)
@@ -42,41 +36,6 @@ PORT     STATE SERVICE    VERSION
 |     Content-Length: 0
 |_    Connection: close
 |_http-title: Error
-1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port8080-TCP:V=7.80%I=7%D=1/7%Time=695E1B4B%P=x86_64-pc-linux-gnu%r(Get
-SF:Request,C9,"HTTP/1\.1\x20404\x20Not\x20Found\r\nConnection:\x20close\r\
-SF:nContent-Length:\x2074\r\nContent-Type:\x20text/html\r\nDate:\x20Wed,\x
-SF:2007\x20Jan\x202026\x2008:37:31\x20GMT\r\n\r\n<html><head><title>Error<
-SF:/title></head><body>404\x20-\x20Not\x20Found</body></html>")%r(HTTPOpti
-SF:ons,C9,"HTTP/1\.1\x20404\x20Not\x20Found\r\nConnection:\x20close\r\nCon
-SF:tent-Length:\x2074\r\nContent-Type:\x20text/html\r\nDate:\x20Wed,\x2007
-SF:\x20Jan\x202026\x2008:37:31\x20GMT\r\n\r\n<html><head><title>Error</tit
-SF:le></head><body>404\x20-\x20Not\x20Found</body></html>")%r(RTSPRequest,
-SF:42,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Length:\x200\r\nConne
-SF:ction:\x20close\r\n\r\n")%r(FourOhFourRequest,C9,"HTTP/1\.1\x20404\x20N
-SF:ot\x20Found\r\nConnection:\x20close\r\nContent-Length:\x2074\r\nContent
-SF:-Type:\x20text/html\r\nDate:\x20Wed,\x2007\x20Jan\x202026\x2008:37:31\x
-SF:20GMT\r\n\r\n<html><head><title>Error</title></head><body>404\x20-\x20N
-SF:ot\x20Found</body></html>")%r(Socks5,42,"HTTP/1\.1\x20400\x20Bad\x20Req
-SF:uest\r\nContent-Length:\x200\r\nConnection:\x20close\r\n\r\n")%r(Generi
-SF:cLines,42,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Length:\x200\r
-SF:\nConnection:\x20close\r\n\r\n")%r(Help,42,"HTTP/1\.1\x20400\x20Bad\x20
-SF:Request\r\nContent-Length:\x200\r\nConnection:\x20close\r\n\r\n")%r(SSL
-SF:SessionReq,42,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Length:\x2
-SF:00\r\nConnection:\x20close\r\n\r\n")%r(TerminalServerCookie,42,"HTTP/1\
-SF:.1\x20400\x20Bad\x20Request\r\nContent-Length:\x200\r\nConnection:\x20c
-SF:lose\r\n\r\n")%r(TLSSessionReq,42,"HTTP/1\.1\x20400\x20Bad\x20Request\r
-SF:\nContent-Length:\x200\r\nConnection:\x20close\r\n\r\n")%r(Kerberos,42,
-SF:"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Length:\x200\r\nConnecti
-SF:on:\x20close\r\n\r\n")%r(SMBProgNeg,42,"HTTP/1\.1\x20400\x20Bad\x20Requ
-SF:est\r\nContent-Length:\x200\r\nConnection:\x20close\r\n\r\n")%r(LPDStri
-SF:ng,42,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Length:\x200\r\nCo
-SF:nnection:\x20close\r\n\r\n")%r(LDAPSearchReq,42,"HTTP/1\.1\x20400\x20Ba
-SF:d\x20Request\r\nContent-Length:\x200\r\nConnection:\x20close\r\n\r\n");
-Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
-
-Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-Nmap done: 1 IP address (1 host up) scanned in 78.86 seconds
 ```
 
 The scan revealed that the host was reachable and running a Linux-based system, with only **three ports open**, suggesting a relatively small and controlled footprint:
